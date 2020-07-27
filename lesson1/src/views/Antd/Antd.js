@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Form, Input, Button, Select } from 'antd';
+import { message, Form, Input, Button, Select } from 'antd';
 
 import './Antd.scss'
 
@@ -34,14 +34,21 @@ class Antd extends Component {
     };
 
     onFinish = values => {
+        message.success('验证通过！', 5);
         console.log(values);
     };
+
+    onFinishFailed = error => {
+        message.error('验证失败！');
+        console.log(error);
+    }
 
     onReset = () => {
         this.formRef.current.resetFields();
     };
 
     onFill = () => {
+
         this.formRef.current.setFieldsValue({
             userName: 'Hello world!',
             Password: '666',
@@ -52,7 +59,7 @@ class Antd extends Component {
         return (
             <section className="page-main antd-form">
                 <h1>React UI框架</h1>
-                <Form {...layout} ref={this.formRef} name="control-ref" onFinish={this.onFinish}>
+                <Form {...layout} ref={this.formRef} name="control-ref" onFinish={this.onFinish} onFinishFailed={this.onFinishFailed}>
                     <Form.Item name="userName" label="账户：" rules={this.rules.userName} >
                         <Input />
                     </Form.Item>

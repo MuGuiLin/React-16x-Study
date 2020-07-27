@@ -1,13 +1,19 @@
 import React, { useContext } from 'react';
-import { Mupiao } from '../../context/theme';
+import { ThemeContext } from '../../context/theme';
 
 const FunComp = () => {
-    // 用hooks来接收 context
-    const context = useContext(Mupiao);
+    // 用hooks方式来接收 context
+    const context = useContext(ThemeContext);
+    console.log(context);
+
+    // let color = '[object Object]' === Object.prototype.toLocaleString(context) ? context.color : context;
+
+    const { color, size } = context;
+
     return (
         <div>
-            <h1>我是function组件</h1>
-            <p>我接收到了context: {context}</p>
+            <h3>🎨 消费者3：我是function组件，用 useContext(ThemeContext); 来获取!</h3>
+            <p style={{ background: color }}>这是我接收到的context: {color}，{size}</p>
         </div>
     );
 }
