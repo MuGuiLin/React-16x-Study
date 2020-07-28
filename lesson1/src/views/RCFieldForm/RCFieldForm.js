@@ -49,7 +49,7 @@ class RCFieldForm extends Component {
         return (
             <section className="page-main antd-form rc-field-form">
                 <h1>rc-field-form Class类式 Form</h1>
-                <p>antd中的表单组件，就是基于rc-field-form来实现的！</p>
+                <p>antd 4 中的表单组件，就是基于rc-field-form来实现的！</p>
                 <Form ref={this.formRef} name="control-ref" onFinish={this.onFinish} onFinishFailed={this.onFinishFailed} onReset={this.onReset}>
                     <Field name="userName" rules={[{ required: true, message: "请输入姓名！" }]} >
                         <MyInput label="账户：" placeholder="请输入账户" />
