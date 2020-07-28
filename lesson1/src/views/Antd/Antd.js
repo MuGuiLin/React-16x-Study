@@ -4,6 +4,8 @@ import { message, Form, Input, Button, Select } from 'antd';
 
 import './Antd.scss'
 
+import FunForm from './FunForm';
+
 const { Option } = Select;
 
 const layout = {
@@ -19,6 +21,7 @@ class Antd extends Component {
         super()
     }
 
+    // 创建表单对象
     formRef = React.createRef();
 
     rules = {
@@ -55,10 +58,14 @@ class Antd extends Component {
         });
     };
 
+    componentDidMount() {
+        console.log('表单对象中的各种方法：', this.formRef.current)
+    }
+
     render() {
         return (
             <section className="page-main antd-form">
-                <h1>React UI框架</h1>
+                <h1>Antd Class 类式 Form</h1>
                 <Form {...layout} ref={this.formRef} name="control-ref" onFinish={this.onFinish} onFinishFailed={this.onFinishFailed}>
                     <Form.Item name="userName" label="账户：" rules={this.rules.userName} >
                         <Input />
@@ -88,7 +95,10 @@ class Antd extends Component {
                         <Button type="dashed" htmlType="button" onClick={this.onReset}> 重置 </Button>
                         <Button type="default" htmlType="button" onClick={this.onFill}> 设置 </Button>
                     </Form.Item>
+                    
                 </Form>
+
+                <FunForm></FunForm>
             </section>
         );
     }

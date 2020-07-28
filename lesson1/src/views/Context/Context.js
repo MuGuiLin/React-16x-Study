@@ -74,7 +74,8 @@ class Context extends Component {
 
         return (
             <section className="page-main context">
-                <h1>Context 组件间跨层组通信</h1>
+                <h1>Context 组件间跨层组通信</h1> 
+                <hr/>
                 <h2 style={{ "color": this.context }}>Context 提供了一个无需为每层组件手动添加 props，就能在组件树间进行数据传递的方法。</h2>
                 <pre>
                     在一个典型的 React 应用中，数据是通过 props 属性自上而下（由父及子）进行传递的，但这种做法对于某些类型的属性而言是极其繁琐的（例如：地区偏好，UI 主题），这些属性是应用程序中许多组件都需要的。
@@ -90,9 +91,9 @@ class Context extends Component {
                     {'\n'}      * React.createContext()       // 创建一个 Context 对象
                     {'\n'}      * Context.Provider            // 提供者：Provider接收一个value属性，传递给消费组件，它允许多个消费组件订阅 context 的变化，当Provider的value 值发生变化时，它内部的所有消费组件都会重新渲染。
 
-                    {'\n'}      * Class.contextType           // 消费者1：在 class 类式组件上以静态属性方式挂载、接收Context对象的值，然后在组件中用this.context来消费(获取)Context中的值。
-                    {'\n'}      * Context.Consumer            // 消费者2：在 class 类式组件中订阅(接收)Context中的值。
-                    {'\n'}      * useContext(contextValue)    // 消费者3：在 function 函数式组件中以hoods方式订阅(接收)Context中的值。
+                    {'\n'}      * Class.contextType           // 消费者1：在 class类式组件上以静态属性方式挂载、接收Context对象，然后在组件中用this.context来(获取)Context中的值，但只能用1次。
+                    {'\n'}      * Context.Consumer            // 消费者2：在 class类式组件中订阅(接收)Context中的值，可以有多个Consumer，而且还可以嵌套使用。
+                    {'\n'}      * useContext(contextValue)    // 消费者3：在 function函数式组件中以hoods方式订阅(接收)Context中的值，可以多次useContext(contextValue)。
 
                     {'\n'}      * Context.displayName         // context 对象接受一个名为 displayName 的 property，类型为字符串。
                 </pre>
@@ -121,7 +122,7 @@ class Context extends Component {
                     {'\n'}<b>3、获取Context中的数据（就是以下3种消费者方式）：</b>
                     <code>
                         import MupiaoContext from '../../context/theme';
-                        {'\n'}    1、static contextType = MupiaoContext;                    //类式组件 在类的形态属性中挂载后，在类中任意地方：this.context  
+                        {'\n'}    1、static contextType = MupiaoContext;                    //类式组件 在类的形态属性中挂载后，在类中任意地方：this.context 注：contextType只能使用1次  
                         {'\n'}    2、《MupiaoContext.Consumer》《/MupiaoContext.Consumer》  //类式组件 用Consumer标签包起来在函数参数中获取：(context) =》 context
                         {'\n'}    3、const context = useContext(MupiaoContext);            //函数组件 useContext() 是从 from 'react';中来的，在函数组件是use后、直接获取：context
                     </code>

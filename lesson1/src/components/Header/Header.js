@@ -18,7 +18,7 @@ class Header extends PureComponent {
     }
 
     handleClick = e => {
-        console.log('click ', e);
+        // console.log('click ', e);
         this.setState({ current: e.key });
     };
 
@@ -33,14 +33,26 @@ class Header extends PureComponent {
                     </Menu.Item>
 
                     <Menu.Item key="2"  icon={<AntDesignOutlined />}>
-                        <NavLink to="/antd" > Antd UI </NavLink> 
+                        <NavLink to="/antd" > Antd Form </NavLink> 
                     </Menu.Item>
 
                     <Menu.Item key="3"  icon={<AntDesignOutlined />}>
-                        <NavLink to="/context" > Context </NavLink> 
+                        <NavLink to="/rc-field-form" > RC-Field-Form </NavLink> 
                     </Menu.Item>
 
                     <Menu.Item key="4"  icon={<AntDesignOutlined />}>
+                        <NavLink to="/my-rc-field-form" > My-RC-Field-Form </NavLink> 
+                    </Menu.Item>
+
+                    <Menu.Item key="5"  icon={<AntDesignOutlined />}>
+                        <NavLink to="/rc-form" > RC-Form </NavLink> 
+                    </Menu.Item>
+
+                    <Menu.Item key="6"  icon={<AntDesignOutlined />}>
+                        <NavLink to="/context" > Context </NavLink> 
+                    </Menu.Item>
+
+                    <Menu.Item key="7"  icon={<AntDesignOutlined />}>
                         <NavLink to="/hoc" > HOC </NavLink> 
                     </Menu.Item>
               
@@ -55,7 +67,7 @@ class Header extends PureComponent {
                         </Menu.ItemGroup>
                     </SubMenu>
 
-                    <Menu.Item key="alipay">
+                    <Menu.Item key="12">
                         <AntDesignOutlined/>
                         <a href="https://ant.design/components/overview-cn/" target="_blank" rel="noopener noreferrer"> Ant Design </a>
                     </Menu.Item>
