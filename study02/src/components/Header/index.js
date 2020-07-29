@@ -10,6 +10,7 @@ class index extends Component {
             <header className="header">
                 <nav>
                     <NavLink to="/" exact={true} activeClassName="active">首页</NavLink>
+                    <NavLink to="redux">Redux</NavLink>
                     <NavLink to="my-redux">MyRedux</NavLink>
                 </nav>
             </header>

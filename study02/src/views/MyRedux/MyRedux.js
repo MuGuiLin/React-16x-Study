@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Store from '../../store';
+import myStore from '../../store/myStore';
 
 import './MyRedux.scss'
 
@@ -10,24 +10,26 @@ class MyRedux extends Component {
     }
 
     componentDidMount() {
-        console.log(Store);
-        Store.subscribe(() => {
+        console.log(myStore);
+        myStore.subscribe(() => {
             this.forceUpdate()
         })
     }
 
     addNum() {
-        Store.dispatch({
+        myStore.dispatch({
             type: 'ADD',
             data: 100
         })
     }
 
     render() {
-        let num = Store.getState()
+        let num = myStore.getState()
         return (
             <section className="page-box">
-                <h1>{num}</h1>
+                <h1>自定义实现 Redux</h1>
+                <hr/>
+                <h2>{num}</h2>
                 <button onClick={this.addNum}>普通添加</button>
                 <button onClick={this.addNum}>异步添加</button>
             </section>
