@@ -32,32 +32,36 @@ class Header extends PureComponent {
                         <NavLink to="/" exact={true}> 首页 </NavLink>
                     </Menu.Item>
 
-                    <Menu.Item key="2"  icon={<AntDesignOutlined />}>
-                        <NavLink to="/antd" > Antd Form </NavLink> 
+                    <Menu.Item key="2" icon={<AntDesignOutlined />}>
+                        <NavLink to="/context" > Context </NavLink>
                     </Menu.Item>
 
-                    <Menu.Item key="3"  icon={<AntDesignOutlined />}>
-                        <NavLink to="/rc-field-form" > RC-Field-Form </NavLink> 
+                    <Menu.Item key="3" icon={<AntDesignOutlined />}>
+                        <NavLink to="/hoc" > HOC </NavLink>
                     </Menu.Item>
 
                     <Menu.Item key="4"  icon={<AntDesignOutlined />}>
-                        <NavLink to="/my-rc-field-form" > My-RC-Field-Form </NavLink> 
+                        <NavLink to="/alert" > Alert </NavLink> 
                     </Menu.Item>
 
-                    <Menu.Item key="5"  icon={<AntDesignOutlined />}>
-                        <NavLink to="/rc-form" > RC-Form </NavLink> 
-                    </Menu.Item> 
-                    
+                    <Menu.Item key="5" icon={<AntDesignOutlined />}>
+                        <NavLink to="/antd" > Antd Form </NavLink>
+                    </Menu.Item>
+
                     <Menu.Item key="6"  icon={<AntDesignOutlined />}>
-                        <NavLink to="/my-rc-form" > My-Rc-Form </NavLink> 
+                        <NavLink to="/rc-field-form" > RC-Field-Form </NavLink> 
                     </Menu.Item>
 
                     <Menu.Item key="7"  icon={<AntDesignOutlined />}>
-                        <NavLink to="/context" > Context </NavLink> 
+                        <NavLink to="/my-rc-field-form" > My-RC-Field-Form </NavLink> 
                     </Menu.Item>
 
                     <Menu.Item key="8"  icon={<AntDesignOutlined />}>
-                        <NavLink to="/hoc" > HOC </NavLink> 
+                        <NavLink to="/rc-form" > RC-Form </NavLink> 
+                    </Menu.Item> 
+                    
+                    <Menu.Item key="9"  icon={<AntDesignOutlined />}>
+                        <NavLink to="/my-rc-form" > My-Rc-Form </NavLink> 
                     </Menu.Item>
               
                     <SubMenu icon={<SettingOutlined />} title="子导航">

@@ -1,0 +1,85 @@
+.alert-box {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba($color: #000000, $alpha: 0.5);
+    .alert-main {
+        padding: 30px;
+        border-radius: 6px;
+        border: 1px solid rebeccapurple;
+        background: white;
+        .title {
+            color: rebeccapurple;
+        }
+        .content {
+            font-size: 18px;
+        }
+    }
+}
+
+.dialog-box {
+    position: fixed;
+    top: 0;
+    right: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba($color: #000000, $alpha: 0.5);
+    .dialog-main {
+        padding: 10px 50px;
+        border-radius: 6px;
+        border: 1px solid rebeccapurple;
+        background: white;
+        .title {
+            color: rebeccapurple;
+        }
+        .content {
+            font-size: 18px;
+        }
+        button {
+            margin: 10px;
+        }
+    }
+    transition: all 1s;
+}
+
+.info {
+    .title {
+        color: rebeccapurple;
+    }
+    .content {
+        color: blue;
+    }
+}
+
+.success {
+    .title {
+        color: rebeccapurple;
+    }
+    .content {
+        color: green;
+    }
+}
+
+.error {
+    .title {
+        color: rebeccapurple;
+    }
+    .content {
+        color: red;
+    }
+}
+
+.warning {
+    .title {
+        color: rebeccapurple;
+    }
+    .content {
+        color: yellow;
+    }
+}

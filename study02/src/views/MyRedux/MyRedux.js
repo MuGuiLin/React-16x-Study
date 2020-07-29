@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+
 import Store from '../../store';
+
+import './MyRedux.scss'
 
 class MyRedux extends Component {
     constructor() {
@@ -23,11 +26,11 @@ class MyRedux extends Component {
     render() {
         let num = Store.getState()
         return (
-            <div>
+            <section className="page-box">
                 <h1>{num}</h1>
                 <button onClick={this.addNum}>普通添加</button>
                 <button onClick={this.addNum}>异步添加</button>
-            </div>
+            </section>
         );
     }
 }

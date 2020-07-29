@@ -1,6 +1,5 @@
 
-const createStore = (countReducer, b) => {
-
+const funCreateStore = (countReducer, b) => {
 
     let state;
     let update = [];
@@ -39,4 +38,4 @@ const createStore = (countReducer, b) => {
     };
 }
 
-export default createStore;
+export default funCreateStore;
