@@ -83,7 +83,7 @@ class Redux extends Component {
 
 
                     <b>Redux 中间件、拦截器：</b>
-                    {'\n'}  * redux-logger              // 打印redux state变更日志
+                    &nbsp;* redux-logger              // 打印redux state变更日志
                     {'\n'}  * redux-thunk               // 异步更新state，对store.dispatch 方法进行改造
                     {'\n'}  * redux-promise             // promise异步更新state，对store.dispatch 方法进行改造
                     <b>安装 Redux：</b>

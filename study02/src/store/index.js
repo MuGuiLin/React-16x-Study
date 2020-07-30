@@ -1,7 +1,7 @@
 // import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { createStore, applyMiddleware, } from 'redux';
 
-import combineReducers from './combineReducers1';
+import combineReducers from './combineReducers';
 
 // 中间件
 import logger from 'redux-logger';
