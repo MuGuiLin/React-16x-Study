@@ -10,11 +10,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-@import "~bootstrap/scss/bootstrap.scss";
+// @import "~bootstrap/scss/bootstrap.scss";
+
+@import '~bootstrap/dist/css/bootstrap.css';
 
 .page-box {
-  padding: 50px;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 30px;
+  width: 1280px;
+
   h1 {
     text-align: center;
+    color: blueviolet;
+  }
+
+  pre {
+    font-size: 16px;
+    line-height: 32px;
+    b {
+      display: block;
+      margin-top: 20px;
+      font-size: 18px;
+      color: red;
+    }
+  }
+
+  code {
+    padding: 10px;
+    color: white;
+    display: block;
+    border-radius: 8px;
+    background: #666;
   }
 }

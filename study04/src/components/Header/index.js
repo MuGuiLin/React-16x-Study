@@ -20,6 +20,8 @@ class index extends Component {
                     </NavLink>
                     <NavLink to='/' className="nav-item nav-link" exact activeClassName="active" >首页</NavLink>
                     <NavLink to='/router' className="nav-item nav-link" exact activeClassName="active" >Router</NavLink>
+                    <NavLink to='/react-router' className="nav-item nav-link" exact activeClassName="active" >React-Router</NavLink>
+                    <NavLink to='/product' className="nav-item nav-link" exact activeClassName="active" >产品</NavLink>
                     <NavLink to='/prompt' className="nav-item nav-link" activeClassName="active" >Prompt</NavLink>
                     <a className="nav-item nav-link disabled" href="#">Disabled</a>
                 </nav>

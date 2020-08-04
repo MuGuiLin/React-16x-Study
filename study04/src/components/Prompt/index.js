@@ -7,7 +7,7 @@ import Prompt from './Prompt';
 class index extends Component {
 
     render() {
-        console.log('Provider', this.props);
+        // console.log('Provider', this.props);
 
         return (
             <Context.Provider value={this.props}>

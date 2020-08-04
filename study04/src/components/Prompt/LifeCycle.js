@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 class LifeCycle extends Component {
 
-
     componentDidMount() {
         if (this.props.onMount) {
             this.props.onMount.call(this, this);
@@ -17,7 +16,7 @@ class LifeCycle extends Component {
 
     render() {
         return (
-            <div className="modal fade" >
+            <div className="" >
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                         <div className="modal-header">
