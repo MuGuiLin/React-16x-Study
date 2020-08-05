@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Home from '../views/Home/Home';
 import Context from '../views/Context/Context';
 import Hoc from '../views/Hoc/Hoc';
+import Complex from '../views/Complex/Complex';
 import Antd from '../views/Antd/Antd';
 import Alert from '../views/Alert';
 import RCFieldForm from '../views/RCFieldForm/RCFieldForm';
@@ -20,13 +21,14 @@ class index extends Component {
                 <Route path="/" exact component={Home}></Route>
                 <Route path="/context" component={Context}></Route>
                 <Route path="/hoc" component={Hoc}></Route>
+                <Route path="/complex" component={Complex}></Route>
                 <Route path="/alert" component={Alert}></Route>
                 <Route path="/antd" component={Antd}></Route>
                 <Route path="/rc-field-form" component={RCFieldForm}></Route>
                 <Route path="/my-rc-field-form" component={MyRCFieldForm}></Route>
                 <Route path="/rc-form" component={RcForm}></Route>
                 <Route path="/my-rc-form" component={MyRcForm}></Route>
-                
+                {/* <Redirect component="404"></Redirect> */}
             </Switch>
         );
     }

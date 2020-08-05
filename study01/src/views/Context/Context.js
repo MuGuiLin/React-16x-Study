@@ -74,7 +74,7 @@ class Context extends Component {
 
         return (
             <section className="page-main context">
-                <h1>Context 组件间跨层组通信</h1> 
+                <h1>Context 组件跨级通信</h1> 
                 <hr/>
                 <h2 style={{ "color": this.context }}>Context 提供了一个无需为每层组件手动添加 props，就能在组件树间进行数据传递的方法。</h2>
                 <pre>

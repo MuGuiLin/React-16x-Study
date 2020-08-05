@@ -48,6 +48,7 @@ class RCFieldForm extends Component {
     render() {
         return (
             <section className="page-main antd-form rc-field-form">
+                <h1>React Performance First Form组件</h1>
                 <h1>rc-field-form Class类式 Form</h1>
                 <p>antd 4 中的表单组件，就是基于rc-field-form来实现的！</p>
                 <Form ref={this.formRef} name="control-ref" onFinish={this.onFinish} onFinishFailed={this.onFinishFailed} onReset={this.onReset}>

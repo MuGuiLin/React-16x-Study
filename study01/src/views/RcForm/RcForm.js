@@ -4,7 +4,8 @@ import { createForm, formShape } from 'rc-form';
 
 import MyInput from "../../components/my-rc-form/Input";
 
-// @createForm()
+// 装饰器
+@createForm()
 class RcForm extends Component {
 
     submit = () => {
@@ -32,7 +33,7 @@ class RcForm extends Component {
         return (
             <section className="page-main antd-form my-rc-form">
                 <h1>my-rc-form Class 类式 Form </h1>
-                <p>自定义实现的 my-rc-form 组件库！</p>
+                <p>antd 3 中的表单组件，就是基于rc-form来实现的！</p>
                 <div>
                     {getFieldDecorator('userName')(<MyInput label="账户：" placeholder="请输入账户" />)}
                     {getFieldDecorator('Password')(<MyInput label="密码：" placeholder="请输入密码" />)}
@@ -53,4 +54,5 @@ class RcForm extends Component {
     }
 }
 
-export default createForm()(RcForm);
+// export default createForm()(RcForm);
+export default RcForm;
