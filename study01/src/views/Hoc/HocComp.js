@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 // HOC高阶组件：是一个函数，参数是一个组件，返回值也是一个组件！
 const HocComp = (Comp) => (props) => {
 
@@ -11,6 +12,17 @@ const HocComp = (Comp) => (props) => {
         </section>
     )
 };
+
+
+// const HocComp = function(Comp) {
+//     return function(props) {
+//         return (
+//             <section>
+//                 <Comp {...props}></Comp>
+//             </section>
+//         )
+//     }
+// }
 
 
 export default HocComp;

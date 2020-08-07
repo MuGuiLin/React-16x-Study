@@ -24,9 +24,10 @@ class Hoc extends Component {
                 <h1>HOC 高阶组件</h1>
                 <hr/>
                 <pre>
-                    为了提高组件复用率，可测试性，就要保证组件功能的单一性。
-                    {'\n'}高阶组件（HOC）是 React 中用于复用组件逻辑的一种高级技巧。HOC 自身不是 React API 的一部分，它是一种基于 React 的组合特性而形成的设计模式。
-                    {'\n'}具体而言，<b>高阶组件是参数为组件，返回值为新组件的函数。</b>
+                    <b>高阶组件英文叫Higher-order component。<a href="https://react.docschina.org/docs/higher-order-components.html" target="_blank">什么是高阶组件？</a></b>
+                    高阶组件是一个函数式组件，它的参数是组件，返回值也是组件。
+                    {'\n'}高阶组件HOC是React中用于复用组件逻辑的一种高级技巧。HOC自身不是React API的一部分，它是一种基于 React的组合特性而形成的设计模式，为了提高组件复用率，可测试性，就要保证组件功能的单一性。
+                    {'\n'}{'\n'}
                     <h3>* 普通组件是将 props 转换为UI，而高阶组件是将组件转换为另一个组件。</h3>
                     <h3>* HOC 不会修改传入的组件，也不会使用继承来复制其行为。相反，HOC 通过将组件包装在容器组件中来组成新组件。HOC 是纯函数，没有副作用。</h3>
 
@@ -38,13 +39,25 @@ class Hoc extends Component {
                         import React from 'react';
                         {'\n'}// HOC高阶组件：是一个函数，参数是一个组件，返回值也是一个组件！
                         {'\n'}const HocComp = (Comp) =&gt; (props) =&gt;﹛
-                        {'\n'}  // =》=》双箭头函数意思是导出一个函数
+                        {'\n'}  // =＞=＞双箭头函数意思是导出一个函数
                         {'\n'}  return (
                         {'\n'}      &lt;section className="border"&gt;
                         {'\n'}          // 我是高阶组件： 把传进来的props 又传给了传进来的组件！
                         {'\n'}          &lt;Comp 【...props】&gt;&lt;/Comp&gt;
                         {'\n'}      &lt;/section&gt;
                         {'\n'}  )
+                        {'\n'} ﹜;
+                        {'\n'}export default HocComp; 
+
+                        {'\n'}const HocComp = function(Comp)﹛
+                        {'\n'}  return function(props)﹛
+                        {'\n'}      return (
+                        {'\n'}          &lt;section className="border"&gt;
+                        {'\n'}              // 我是高阶组件： 把传进来的props 又传给了传进来的组件！
+                        {'\n'}              &lt;Comp ﹛...props﹜&gt;&lt;/Comp&gt;
+                        {'\n'}          &lt;/section&gt;
+                        {'\n'}      )
+                        {'\n'}  ﹜
                         {'\n'} ﹜;
                         {'\n'}export default HocComp; 
                     </code>

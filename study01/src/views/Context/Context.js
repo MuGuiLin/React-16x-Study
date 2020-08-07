@@ -76,26 +76,27 @@ class Context extends Component {
             <section className="page-main context">
                 <h1>Context 组件跨级通信</h1> 
                 <hr/>
-                <h2 style={{ "color": this.context }}>Context 提供了一个无需为每层组件手动添加 props，就能在组件树间进行数据传递的方法。</h2>
                 <pre>
+                    <b>Context 提供了一个无需为每层组件手动添加 props，就能在组件树间进行数据传递的方法。<a href="https://react.docschina.org/docs/context.html" target="_blank">什么是Context？</a></b>
+
                     在一个典型的 React 应用中，数据是通过 props 属性自上而下（由父及子）进行传递的，但这种做法对于某些类型的属性而言是极其繁琐的（例如：地区偏好，UI 主题），这些属性是应用程序中许多组件都需要的。
                     {'\n'}Context 提供了一种在组件之间共享此类值的方式，而不必显式地通过组件树的逐层传递 props。
 
                     {'\n'}<b>何时使用 Context：</b>
-                    {'\n'}Context 设计目的是为了共享那些对于一个组件树而言是“全局”的数据，例如当前认证的用户信息、主题色或首选语言。
+                    Context 设计目的是为了共享那些对于一个组件树而言是“全局”的数据，例如当前认证的用户信息、主题色或首选语言。
 
                     {'\n'}<b>注项事项：</b>
-                    {'\n'}Context 主要应用场景在于很多不同层级的组件需要访问同样一些的数据。请谨慎使用，因为这会使得组件的复用性变差。
+                    Context 主要应用场景在于很多不同层级的组件需要访问同样一些的数据。请谨慎使用，因为这会使得组件的复用性变差。
 
                     {'\n'}<b>Context API：</b>
-                    {'\n'}      * React.createContext()       // 创建一个 Context 对象
-                    {'\n'}      * Context.Provider            // 提供者：Provider接收一个value属性，传递给消费组件，它允许多个消费组件订阅 context 的变化，当Provider的value 值发生变化时，它内部的所有消费组件都会重新渲染。
-
-                    {'\n'}      * Class.contextType           // 消费者1：在 class类式组件上以静态属性方式挂载、接收Context对象，然后在组件中用this.context来(获取)Context中的值，但只能用1次。
-                    {'\n'}      * Context.Consumer            // 消费者2：在 class类式组件中订阅(接收)Context中的值，可以有多个Consumer，而且还可以嵌套使用。
-                    {'\n'}      * useContext(contextValue)    // 消费者3：在 function函数式组件中以hoods方式订阅(接收)Context中的值，可以多次useContext(contextValue)。
-
-                    {'\n'}      * Context.displayName         // context 对象接受一个名为 displayName 的 property，类型为字符串。
+                    <ul>
+                        <li> React.createContext()       // 创建一个 Context 对象</li>
+                        <li> Context.Provider            // 提供者：Provider接收一个value属性，传递给消费组件，它允许多个消费组件订阅 context 的变化，当Provider的value 值发生变化时，它内部的所有消费组件都会重新渲染。</li>
+                        <li> Class.contextType           // 消费者1：在 class类式组件上以静态属性方式挂载、接收Context对象，然后在组件中用this.context来(获取)Context中的值，但只能用1次。</li>
+                        <li> Context.Consumer            // 消费者2：在 class类式组件中订阅(接收)Context中的值，可以有多个Consumer，而且还可以嵌套使用。</li>
+                        <li> useContext(contextValue)    // 消费者3：在 function函数式组件中以hoods方式订阅(接收)Context中的值，可以多次useContext(contextValue)。</li>
+                        <li> Context.displayName         // context 对象接受一个名为 displayName 的 property，类型为字符串。</li>
+                    </ul>
                 </pre>
                 <h2 className="h2">使用方法：</h2>
                 <pre>
