@@ -15,7 +15,7 @@ const HocComp = (Comp) => (props) => {
 
 // ES5 的写法
 const HocComp2 = function(Comp) {
-    console.log('这是传进来的组件：------', Comp);
+    // console.log('这是传进来的组件：------', Comp);
     return function(props) {
         return (
             <section className="border">

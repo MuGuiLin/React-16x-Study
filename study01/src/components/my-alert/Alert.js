@@ -9,7 +9,7 @@ class Alert extends Component {
     render() {
         const { title, content } = this.props;
 
-        // ReactDOM.createPortal(child, container) 传送门API
+        // ReactDOM.createPortal(child, container) React 传送门API
         return createPortal (
             <section className="alert-box">
                 <div className="alert-main" >

@@ -48,8 +48,8 @@ const FunMyRCFieldForm = () => {
                     <MyInput label="密码：" placeholder="请输入密码" />
                 </Field>
                 <Field>
-                    <button type="submit"> 提交 </button>
-                    <button type="reset"> 重置 </button>
+                    {/* <button type="submit"> 提交 </button> */}
+                    {/* <button type="reset"> 重置 </button> */}
                     <button type="button" onClick={onFill}> 设置 </button>
                 </Field>
             </Form>
