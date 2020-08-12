@@ -34,6 +34,10 @@ class Header extends PureComponent {
 
                     <Menu.Item key="2" icon={<CopyrightOutlined />}>
                         <NavLink to="/context" > Context </NavLink>
+                    </Menu.Item> 
+                    
+                    <Menu.Item key="7" icon={<FunctionOutlined />}>
+                        <NavLink to="/curry" > Curry </NavLink>
                     </Menu.Item>
 
                     <Menu.Item key="3" icon={<FunctionOutlined />}>

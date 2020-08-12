@@ -6,15 +6,15 @@
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: normal;
   letter-spacing: -1px;
 }
 
 .welcome {
-  height: 328px;
+  height: 628px;
   background: url(../assets/yay.jpg) no-repeat center 0;
-  background-size: 388px 328px;
+  background-size: 50%;
 }
 
 .list {
@@ -22,6 +22,10 @@
   margin-top: 1.8em;
   list-style: none;
   line-height: 1.5em;
+}
+
+.list li{
+  line-height: 36px;
 }
 
 .list code {

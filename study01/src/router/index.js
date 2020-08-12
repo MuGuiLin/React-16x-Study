@@ -3,6 +3,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Home from '../views/Home/Home';
 import Context from '../views/Context/Context';
+import Curry from '../views/Curry/Curry';
 import Hof from '../views/Hof/Hof';
 import Hoc from '../views/Hoc/Hoc';
 import Complex from '../views/Complex/Complex';
@@ -21,6 +22,7 @@ class index extends Component {
             <Switch>
                 <Route path="/" exact component={Home}></Route>
                 <Route path="/context" component={Context}></Route>
+                <Route path="/curry" component={Curry}></Route>
                 <Route path="/hof" component={Hof}></Route>
                 <Route path="/hoc" component={Hoc}></Route>
                 <Route path="/complex" component={Complex}></Route>

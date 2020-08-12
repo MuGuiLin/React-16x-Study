@@ -1,0 +1,21 @@
+.page{
+    margin: auto;
+    width: 1280px;
+    font-size: 16px;
+}
+.h1{
+    padding-top: 3em;
+    text-align: center;
+}
+.p{
+    text-indent: 2em;
+    line-height: 32px;
+}
+.pre{
+    
+}
+.pre b{
+    display: block;
+    margin-top: 1em;
+    color: red;
+}

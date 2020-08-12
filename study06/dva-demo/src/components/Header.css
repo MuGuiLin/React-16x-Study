@@ -1,0 +1,17 @@
+.header{
+    line-height: 50px;
+    font-size: 18px;
+    border-bottom: 1px solid purple;
+}
+
+.header nav{}
+
+.header nav a{
+    padding: 18px;
+    margin: 10px;
+}
+
+.header nav .active{
+    color: #ff008f;
+    font-weight: bold;
+}

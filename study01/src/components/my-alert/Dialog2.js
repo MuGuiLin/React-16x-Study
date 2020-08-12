@@ -23,6 +23,7 @@ class Dialog2 extends Component {
 
     render() {
         const { title, content } = this.props;
+        // createPortal() 传送门API
         return createPortal (
             <section className="dialog-box">
                 <div className="dialog-main" >
