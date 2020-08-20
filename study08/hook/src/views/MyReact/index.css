@@ -1,0 +1,45 @@
+.green {
+    color: green
+}
+
+.blue {
+    color: blue
+}
+
+.border {
+    padding: 10px;
+    border : 1px solid purple;
+}
+
+.page {
+    margin: auto;
+    width : 1280px;
+}
+
+.page h1 {
+    text-align: center;
+}
+
+.page pre {
+    /* line-height: 28px; */
+}
+
+.page img {
+    width: 100%;
+}
+
+.page pre a {
+    font-size: 16px;
+}
+
+.page pre b {
+    display   : block;
+    margin-top: 30px;
+    color     : red;
+    font-size : 18px;
+}
+
+.page pre ul,
+li {
+    line-height: 32px;
+}

@@ -1,15 +1,24 @@
 import React from 'react';
 
-import Header from './components/Header';
-import Router  from './routes';
+import logo from './logo.svg';
+import './App.css';
 
-function App(props) {
-  // console.log(props);
+function App() {
 
   return (
     <section className="App">
-      <Header></Header>
-      <Router></Router>
+      <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+              Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer" >
+              React 英文文档
+          </a>~
+          <a className="App-link" href="https://react.docschina.org/" target="_blank" rel="noopener noreferrer" >
+              React 中文文档
+          </a>
+      </header>
     </section>
   );
 }

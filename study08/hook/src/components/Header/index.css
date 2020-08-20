@@ -1,0 +1,14 @@
+.header{
+    border-bottom: 1px solid darkblue;
+}
+.header a{
+    display: inline-block;
+    margin: 0 20px;
+    padding: 0 30px;
+    font-size: 18px;
+    line-height: 60px;
+}
+.header a.active{
+    color: white;
+    background-color: darkblue;
+}
