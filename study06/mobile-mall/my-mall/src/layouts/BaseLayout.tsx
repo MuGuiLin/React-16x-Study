@@ -15,11 +15,14 @@ const BaseLayout: React.FC<BaseLoutProps> = props => {
     const { children, location, dispatch, user } = props;
     // console.log(props);
 
+    //注：useEffect 接受一个回调函数，这个回调函数内代码会在如类式组件中的 componentDidMount()和componentDidUpdate()时执行。回调函数的返回值应该是一个函数，这个函数会在componentWillUnmount()
     useEffect(() => {
         dispatch({
             type: 'user/fetchUser'
         })
     }, []);
+
+    const isShowBottomNav = '/login' !== location.pathname
 
     return (
         <section className={css.main}>
@@ -27,7 +30,7 @@ const BaseLayout: React.FC<BaseLoutProps> = props => {
                 {children}
             </article>
             <footer>
-                <BottomNav pathname={location.pathname} />
+                {isShowBottomNav && <BottomNav pathname={location.pathname} />}
             </footer>
         </section>
     );

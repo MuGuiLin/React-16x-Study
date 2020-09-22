@@ -13,7 +13,7 @@ interface IsLoginLayoutProps extends ConnectProps {
 const IsLoginLayout: React.FC<IsLoginLayoutProps> = ({ user, children, location }) => {
     console.log(location);
 
-    const { userid } = user.userState;
+    const { userid } = user.userInfo;
     //如果没有登录，就往登录页跳转，并把当前页面路由记录在名为form中，在redux存起来
     if (!userid) {
         return <Redirect to={{ pathname: '/login', state: { from: location.pathname } }}></Redirect>

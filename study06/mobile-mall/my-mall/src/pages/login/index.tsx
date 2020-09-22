@@ -11,15 +11,15 @@ interface LoginProps extends ConnectProps {
   dispatch: Dispatch
 };
 const Login: React.FC<LoginProps> = ({ user, location, dispatch }) => {
-  const { userid } = user.userState;
+  const { userid } = user.userInfo;
   // console.log('-------------------', user);
 
   const handleSubmit = (val: UserLgonFormParams) => {
-    console.log('登录表单数据', val);
+    // console.log('登录表单数据', val);
 
-    dispatch({ type: 'user/login', payload: val });
+    dispatch({ type: 'user/userLogin', payload: val });
   };
-
+  
   if (!!userid) {
     // 如果已经登录过(有userid)了，就从哪时回哪里去！
     const { from = '/' } = location.state || {};

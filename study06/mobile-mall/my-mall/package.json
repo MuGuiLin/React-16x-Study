@@ -33,6 +33,7 @@
     "yorkie": "^2.0.0"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.10",
     "mockjs": "^1.1.0",
     "postcss-px-to-viewport": "^1.1.1"
   }

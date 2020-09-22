@@ -6,7 +6,7 @@ export default {
   'GET /api/getUserDetail': {
     status: 1,
     id: '001',
-    name: '莎士比亚',
+    name: '沐枫自然',
     icon: 'https://tva1.sinaimg.cn/large/00831rSTly1gdm7eok2oij301s01sgli.jpg',
     email: 'shakespeare@kkb.com',
     signature: 'hello world',
@@ -26,7 +26,7 @@ export default {
       },
     ],
     country: 'China',
-    address: '开课吧总部',
+    address: '阿里总部',
     phone: '0110-20204123',
   },
 };

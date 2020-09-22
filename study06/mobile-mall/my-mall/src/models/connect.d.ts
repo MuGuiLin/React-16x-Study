@@ -1,4 +1,3 @@
-import { Dispatch } from 'react';
 /**
  * 声明 connect state 类型
  */
@@ -12,7 +11,7 @@ export interface ConnectState {
 
 export interface ConnectProps {
     location: Location & { state: { from: string } };
-    // dispatch: Dispatch;
+    dispatch: Dispatch;
 }
 
 export {

@@ -55,7 +55,7 @@ export default {
     }
   },
   'GET /api/logout': {
-    data: { msg: 'success' },
+    data: { status: 1, msg: 'success' },
   },
 
   'POST /api/login/account': (req: Request, res: Response) => {

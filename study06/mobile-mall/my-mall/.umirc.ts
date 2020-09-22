@@ -46,7 +46,7 @@ export default defineConfig({
       path: '/',
       component: '@/layouts/BaseLayout',
       routes: [
-        { path: '/', component: '@/pages/index' },
+        { path: '/', component: '@/pages/home/index' },
         { path: '/login', component: '@/pages/login/index' },
 
         // 需要登录后才能访问的页面
