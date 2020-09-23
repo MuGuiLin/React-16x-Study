@@ -1,12 +1,14 @@
 import { defineConfig } from 'umi';
 
 export default defineConfig({
-  title: '这是个商城',
+  title: '我的商城',
   nodeModulesTransform: {
     type: 'none',
   },
-  // history: { type: 'hash' },
-  // base: '/kkb',
+  // base: '/docs/',
+  // publicPath: '/static/',
+  // hash: true,
+  // history: { type: 'hash' }, // 使用hash路由
   theme: {
     'primary-color': 'red',
     'brand-primary': 'red',
@@ -38,16 +40,16 @@ export default defineConfig({
       component: '@/layouts/BasicLayout',
       routes: [
         { path: '/', component: '@/pages/home/index' },
-        { path: '/login', component: '@/pages/login/index' },
-        { path: '/search', component: '@/pages/search/index' },
-        { path: '/product/:id', component: '@/pages/product/[id]' },
+        { path: '/login', component: '@/pages/login/index', title: "用户登录" },
+        { path: '/search', component: '@/pages/search/index', title: "商品搜索" },
+        { path: '/product/:id', component: '@/pages/product/[id]', title: "商品详情" },
         {
           path: '/',
           component: '@/layouts/SecurityLayout',
           routes: [
-            { path: '/cart', component: '@/pages/cart/index' },
-            { path: '/olist', component: '@/pages/olist/index' },
-            { path: '/user', component: '@/pages/user/index' },
+            { path: '/cart', component: '@/pages/cart/index', title: "购物车" },
+            { path: '/olist', component: '@/pages/olist/index', title: "订单列表" },
+            { path: '/user', component: '@/pages/user/index', title: "用户中心" },
             { path: '/confirmBill', component: '@/pages/confirmBill' },
           ],
         },
